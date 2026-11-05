@@ -1,125 +1,190 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TECHPRINTZONE Print Portal - Printout, photocopy, scanning and document services in Motihari.">
-<title>TECHPRINTZONE | Print Portal</title>
+<meta name="description" content="TECHPRINTZONE Print Portal - Online forms, government services, Aadhaar assistance where authorised, banking assistance, printing, scanning and travel services in Motihari, Bihar.">
+<meta name="theme-color" content="#07152e">
+<title>TECHPRINTZONE | Premium Print & Digital Service Portal</title>
 <style>
-:root{--navy:#071a36;--blue:#1264d8;--cyan:#20c9e8;--orange:#ff9d22;--bg:#f3f7ff;--ink:#12213b;--muted:#62718a}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
-header{background:linear-gradient(110deg,#06152e,#103c78);color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.logo{font-size:22px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--orange)}
-header small{color:#d5e7ff}
-main{max-width:1000px;margin:34px auto;padding:0 16px}
-.hero{background:linear-gradient(125deg,#08214a,#1264d8);color:white;border-radius:20px;padding:32px;margin-bottom:22px;box-shadow:0 12px 30px #0b347222}
-.hero h1{font-size:clamp(28px,5vw,42px);margin:0 0 9px}.hero p{color:#e2efff;margin:0;line-height:1.6}
-.panel{background:white;border:1px solid #e0e8f4;border-radius:18px;padding:25px;box-shadow:0 8px 25px #102c5010}
-h2{margin:0 0 18px;font-size:23px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #cbd7e8;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid #9bc8ff;border-color:var(--blue)}
-.field{margin-bottom:16px}.full{grid-column:1/-1}
-.upload{border:2px dashed #9bb7df;background:#f6faff;padding:18px;border-radius:12px}
-.hint{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
-button,.btn{border:0;border-radius:10px;padding:14px 20px;font-weight:800;font-size:15px;cursor:pointer;display:inline-block;text-decoration:none}
-button{background:linear-gradient(100deg,var(--orange),#ffc14e);color:#1c2b40;width:100%}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-.service{background:white;border:1px solid #e1eaf6;padding:15px;border-radius:12px;text-align:center;font-weight:700;font-size:14px}
-.service span{display:block;font-size:25px;margin-bottom:5px}
-.notice{background:#fff7e8;border-left:4px solid var(--orange);padding:13px;border-radius:8px;color:#60491f;font-size:13px;line-height:1.5;margin-top:18px}
-.contact{text-align:center;margin:22px 0;color:var(--muted);font-size:14px}
-footer{text-align:center;padding:22px;background:#06152e;color:#c8d7eb;font-size:13px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.hero{padding:25px}.panel{padding:18px}}
+:root{--navy:#07152e;--navy2:#0b2852;--blue:#1769e0;--cyan:#19c8e8;--orange:#ff9d24;--ink:#14233e;--muted:#63718a;--bg:#f3f7fd;--line:#e1e9f4;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.topbar{background:#041027;color:#dceaff;padding:9px 5%;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#071a38f5;backdrop-filter:blur(12px);border-bottom:1px solid #29466a}
+.nav{max-width:1220px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:white;min-width:230px}
+.brandmark{width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;font-size:23px;box-shadow:0 5px 18px #19c8e844}
+.brandname{font-size:19px;font-weight:950;letter-spacing:.5px;line-height:1.05}.brandname span{color:var(--orange)}.brandname small{display:block;font-size:9px;letter-spacing:2.4px;color:#a9c9f1;margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:20px;color:#e4efff;font-size:13px;font-weight:750}.navlinks a:hover{color:var(--cyan)}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;background:linear-gradient(110deg,#ffb43d,#ff8e1c);color:#17243a;font-weight:850;border:0;cursor:pointer;box-shadow:0 8px 20px #ff9d2430}
+.btn.blue{background:linear-gradient(110deg,#1683ed,#1458c7);color:white;box-shadow:0 8px 20px #1769e033}
+.btn.outline{background:transparent;border:1px solid #8db9ec;color:white;box-shadow:none}
+.hero{background:radial-gradient(circle at 82% 20%,#1765ad 0,transparent 29%),radial-gradient(circle at 10% 90%,#0d4b83 0,transparent 28%),linear-gradient(120deg,#06132c,#0b2b57 65%,#06152e);color:white;padding:75px 22px 88px;overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:44px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#8cecff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:900}
+.hero h1{font-size:clamp(39px,5.7vw,68px);line-height:1.02;letter-spacing:-2px;margin:16px 0}
+.hero h1 span{display:block;color:var(--orange);text-shadow:0 5px 25px #ff9d2433}
+.hero p{font-size:17px;color:#d9eaff;max-width:590px;margin:0}
+.trustrow{display:flex;gap:17px;flex-wrap:wrap;margin:23px 0 27px;color:#e9f5ff;font-size:13px;font-weight:750}.trustrow span:before{content:"✓";color:#43e6ad;margin-right:7px;font-weight:900}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{border:1px solid #3878b4;background:linear-gradient(145deg,#ffffff18,#ffffff08);border-radius:24px;padding:25px;box-shadow:0 24px 60px #0006;position:relative}
+.hero-screen{background:linear-gradient(145deg,#e9f7ff,#cfe7ff);color:#09244b;border-radius:16px;padding:27px 18px;text-align:center}
+.hero-screen .symbol{font-size:43px;color:#0876d9}.hero-screen strong{display:block;font-size:27px;font-weight:950;letter-spacing:1px}.hero-screen strong span{color:#ed8a14}.hero-screen small{display:block;color:#47617e;font-weight:800;letter-spacing:2px;margin-top:7px}
+.hero-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.hero-chips div{border:1px solid #ffffff2a;background:#ffffff12;border-radius:10px;padding:10px 5px;text-align:center;color:#eff8ff;font-size:11px;font-weight:750}
+.quick{max-width:1120px;margin:-29px auto 0;position:relative;padding:0 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.quickitem{background:white;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;align-items:center;gap:12px;box-shadow:0 10px 30px #0c2c5210;min-width:0}
+.quickicon{width:42px;height:42px;display:grid;place-items:center;background:#eaf4ff;border-radius:12px;font-size:20px;flex-shrink:0}.quickitem small{display:block;color:var(--muted);font-size:11px}.quickitem strong{font-size:13px;overflow-wrap:anywhere}
+section{padding:70px 22px}.container{max-width:1180px;margin:auto}
+.section-head{text-align:center;max-width:720px;margin:0 auto 34px}.section-head .eyebrow{color:var(--blue)}.section-head h2{font-size:clamp(27px,4vw,38px);line-height:1.15;margin:9px 0 10px;letter-spacing:-.8px}.section-head h2 span{color:#e98a16}.section-head p{color:var(--muted);margin:0;font-size:14px}
+.services-section{background:var(--bg)}
+.category-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 auto 26px}
+.tab{border:1px solid #d5e1f0;background:white;color:#30425e;padding:9px 14px;border-radius:30px;font-size:12px;font-weight:800;cursor:pointer}
+.tab.active,.tab:hover{background:#0c3973;color:white;border-color:#0c3973}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.service-card{background:white;border:1px solid var(--line);border-radius:14px;padding:17px 15px;min-height:124px;transition:.2s;box-shadow:0 4px 13px #0d2c5010}
+.service-card:hover{transform:translateY(-4px);border-color:#a8c9ef;box-shadow:0 13px 25px #0d2c5017}
+.service-card .ico{font-size:23px;margin-bottom:8px}.service-card h3{font-size:13px;line-height:1.3;margin:0 0 5px}.service-card p{font-size:11px;color:var(--muted);margin:0}
+.no-results{display:none;text-align:center;color:var(--muted);padding:25px}
+.searchbar{max-width:480px;margin:0 auto 20px;position:relative}.searchbar input{width:100%;border:1px solid #d5e1f0;background:white;padding:13px 16px 13px 42px;border-radius:12px;outline:none}.searchbar input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769e018}.searchbar span{position:absolute;left:15px;top:10px;font-size:18px}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.why-panel{background:linear-gradient(135deg,#071a38,#104b8d);color:white;padding:30px;border-radius:20px}.why-panel h3{font-size:25px;margin:0 0 10px}.why-panel p{color:#dceaff;font-size:14px}.why-points{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}.why-points div{background:#ffffff12;border:1px solid #ffffff1e;border-radius:12px;padding:13px;font-size:12px;font-weight:800}
+.why-copy h2{font-size:34px;line-height:1.15;margin:8px 0 13px}.why-copy p{color:var(--muted);font-size:14px}.why-copy .eyebrow{color:var(--blue)}
+.request{background:#eef5ff}.requestbox{max-width:780px;margin:auto;background:white;border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 10px 30px #0d2c5010}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:12px;font-weight:850;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #d4deec;border-radius:9px;padding:12px;background:white;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769e018}.wide{grid-column:1/-1}.formhint{font-size:11px;color:var(--muted);margin-top:6px}
+.notice{background:#fff7e8;border-left:4px solid var(--orange);padding:13px 15px;border-radius:8px;color:#654a1d;font-size:12px;margin-top:18px}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contactbox{background:white;border:1px solid var(--line);border-radius:15px;padding:22px}.contactline{padding:12px 0;border-bottom:1px solid #edf1f7}.contactline:last-child{border:0}.contactline small{display:block;color:var(--muted);font-size:11px}.contactline strong,.contactline a{font-size:14px;font-weight:850;color:#135ab4;overflow-wrap:anywhere}
+.cta{background:linear-gradient(110deg,#06152e,#10427b);color:white;padding:36px 22px}.ctain{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.ctain h2{font-size:27px;margin:0 0 5px}.ctain p{margin:0;color:#d9eaff;font-size:13px}
+footer{background:#041027;color:#b7c9e2;text-align:center;padding:24px 16px;font-size:12px}footer strong{color:white}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr  .8fr;gap:22px}.navlinks{gap:11px}.service-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.topbar{justify-content:center;text-align:center}.nav{align-items:flex-start;flex-direction:column;gap:12px}.navlinks{width:100%;overflow-x:auto;padding-bottom:3px}.navlinks a{white-space:nowrap}.navlinks .navbtn{display:none}.hero{padding:53px 18px 65px}.hero-inner{grid-template-columns:1fr}.hero-card{max-width:470px;margin:auto;width:100%}.quick{grid-template-columns:1fr;margin:14px 12px 0;padding:0}.quickitem{padding:12px}.service-grid{grid-template-columns:repeat(2,1fr)}section{padding:55px 16px}.why-grid,.contactgrid{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.wide{grid-column:auto}.requestbox{padding:19px}.why-points{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.service-grid{grid-template-columns:1fr}.brandname{font-size:17px}.hero h1{letter-spacing:-1px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">TECH<span>PRINT</span>ZONE</div>
-  <small>YOUR DIGITAL HELP DESK · MOTIHARI, BIHAR</small>
-</header>
+<div class="topbar"><span>📍 MOTIHARI, BIHAR · YOUR DIGITAL HELP DESK</span><span>☎ +91 83071 54117 &nbsp; | &nbsp; ✉ thetigerxwd@gmail.com</span></div>
+<header><nav class="nav">
+<a class="brand" href="#home"><span class="brandmark">🖨️</span><span class="brandname">TECH<span>PRINT</span>ZONE<small>PRINT & DIGITAL SERVICE PORTAL</small></span></a>
+<div class="navlinks"><a href="#home">Home</a><a href="#services">All Services</a><a href="#why">Why Us</a><a href="#request">Enquiry</a><a href="#contact">Contact</a><a class="btn navbtn" href="https://wa.me/918307154117">WhatsApp Us ↗</a></div>
+</nav></header>
 <main>
-  <section class="hero">
-    <h1>Online Print Order Portal</h1>
-    <p>Printout, photocopy aur document services ke liye apni request bhejein. Budget-friendly service, friendly support aur genuine assistance.</p>
-  </section>
-
-  <section class="panel">
-    <h2>🖨️ Print Order Request</h2>
-    <form id="printForm">
-      <div class="grid">
-        <div class="field">
-          <label for="customer">Aapka naam *</label>
-          <input id="customer" required placeholder="Apna naam likhein">
-        </div>
-        <div class="field">
-          <label for="phone">Mobile number *</label>
-          <input id="phone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 digit mobile number">
-        </div>
-        <div class="field">
-          <label for="service">Service *</label>
-          <select id="service" required>
-            <option value="">Service select karein</option>
-            <option>Black & White Printout</option>
-            <option>Colour Printout</option>
-            <option>Photocopy</option>
-            <option>Document Scanning</option>
-            <option>PDF / Document Work</option>
-            <option>Photo Print</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="paper">Paper size</label>
-          <select id="paper"><option>A4</option><option>A3</option><option>Legal</option><option>Photo Paper</option><option>Other / Confirm on WhatsApp</option></select>
-        </div>
-        <div class="field">
-          <label for="copies">Copies / Sets *</label>
-          <input id="copies" type="number" min="1" max="500" value="1" required>
-        </div>
-        <div class="field">
-          <label for="sides">Print type</label>
-          <select id="sides"><option>Single side</option><option>Both sides</option><option>Not applicable</option></select>
-        </div>
-        <div class="field full">
-          <label for="file">Document select karein (optional)</label>
-          <div class="upload"><input id="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><div class="hint">PDF, JPG, PNG ya Word file select kar sakte hain. File is demo page par sirf aapke browser mein select hoti hai; WhatsApp par automatically upload nahi hoti.</div></div>
-        </div>
-        <div class="field full">
-          <label for="notes">Extra instructions</label>
-          <textarea id="notes" rows="3" placeholder="Jaise: page number, colour pages, urgent order..."></textarea>
-        </div>
-        <div class="field full"><button type="submit">WhatsApp par Order Request Bhejein ↗</button></div>
-      </div>
-    </form>
-    <div class="notice"><b>Note:</b> Ye request portal hai, online payment ya automatic file upload abhi enabled nahi hai. Order confirm karne se pehle WhatsApp par file bhejein aur final price / availability confirm karein. OTP, password ya banking PIN kabhi share na karein.</div>
-  </section>
-
-  <div class="services">
-    <div class="service"><span>📄</span>Printout</div>
-    <div class="service"><span>📚</span>Photocopy</div>
-    <div class="service"><span>📠</span>Scanning</div>
-    <div class="service"><span>🎨</span>Colour Print</div>
-    <div class="service"><span>📑</span>PDF Work</div>
-    <div class="service"><span>🪪</span>Photo Print</div>
-  </div>
-  <div class="contact">📞 <a href="tel:+918307154117">+91 83071 54117</a> &nbsp; | &nbsp; ✉ <a href="mailto:thetigerxwd@gmail.com">thetigerxwd@gmail.com</a><br>Motihari, Bihar</div>
+<section class="hero" id="home"><div class="hero-inner">
+<div><span class="eyebrow">✦ SMART · SIMPLE · TRUSTED</span><h1>WELCOME TO <span>TECHPRINTZONE</span></h1><p>Your one-stop Print & Digital Service Portal for online applications, government service assistance, document work, printing, banking-related assistance and travel bookings.</p>
+<div class="trustrow"><span>Genuine Assistance</span><span>Budget-Friendly</span><span>Friendly Support</span></div>
+<div class="hero-actions"><a class="btn" href="#services">Explore All Services ↓</a><a class="btn outline" href="https://wa.me/918307154117?text=Hello%20TECHPRINTZONE%2C%20I%20need%20service%20information.">Chat on WhatsApp</a></div>
+</div>
+<div class="hero-card"><div class="hero-screen"><div class="symbol">⌘</div><strong>TECH<span>PRINT</span>ZONE</strong><small>PRINT · APPLY · CONNECT</small></div><div class="hero-chips"><div>📝 Online Forms</div><div>🖨️ Print & Scan</div><div>🪪 ID Assistance</div><div>🏦 Banking Help</div><div>🚆 Ticket Help</div><div>📄 Document Work</div></div></div>
+</div></section>
+<div class="quick">
+<div class="quickitem"><div class="quickicon">📞</div><div><small>Call / WhatsApp</small><strong>+91 83071 54117</strong></div></div>
+<div class="quickitem"><div class="quickicon">✉️</div><div><small>Email</small><strong>thetigerxwd@gmail.com</strong></div></div>
+<div class="quickitem"><div class="quickicon">📍</div><div><small>Service Location</small><strong>Motihari, Bihar</strong></div></div>
+</div>
+<section class="services-section" id="services"><div class="container">
+<div class="section-head"><span class="eyebrow">OUR SERVICE DIRECTORY</span><h2>All Services at <span>TECHPRINTZONE</span></h2><p>Browse our wide range of digital, document, print and online assistance services. Search by service name or choose a category.</p></div>
+<div class="searchbar"><span>⌕</span><input id="serviceSearch" type="search" placeholder="Search services... e.g. PAN, print, ticket"></div>
+<div class="category-tabs" id="tabs">
+<button class="tab active" data-filter="all">All Services</button><button class="tab" data-filter="forms">Forms & Exams</button><button class="tab" data-filter="identity">ID & Certificates</button><button class="tab" data-filter="aadhaar">Aadhaar</button><button class="tab" data-filter="land">Land Records</button><button class="tab" data-filter="banking">Banking & Finance</button><button class="tab" data-filter="printing">Print & Documents</button><button class="tab" data-filter="travel">Travel & Bills</button><button class="tab" data-filter="digital">Digital & Other</button>
+</div>
+<div class="service-grid" id="serviceGrid">
+<article class="service-card" data-cat="forms"><div class="ico">📝</div><h3>Online Form Fill-up</h3><p>Online application form assistance</p></article>
+<article class="service-card" data-cat="forms"><div class="ico">📋</div><h3>Registration (All Types)</h3><p>Registration assistance</p></article>
+<article class="service-card" data-cat="forms"><div class="ico">🎓</div><h3>Scholarship Form</h3><p>Scholarship application assistance</p></article>
+<article class="service-card" data-cat="forms"><div class="ico">💼</div><h3>Job Application</h3><p>Recruitment and job forms</p></article>
+<article class="service-card" data-cat="forms"><div class="ico">🧾</div><h3>Exam Form (SSC, Railway etc.)</h3><p>Competitive exam applications</p></article>
+<article class="service-card" data-cat="forms"><div class="ico">🎫</div><h3>Result & Admit Card Download</h3><p>Result and admit card assistance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🪪</div><h3>PAN Card Apply / Correction</h3><p>PAN application guidance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🗳️</div><h3>Voter ID Apply / Correction</h3><p>Voter service assistance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🚘</div><h3>Driving Licence Apply</h3><p>Licence application assistance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🛂</div><h3>Passport Apply</h3><p>Passport application guidance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🍚</div><h3>Ration Card Services</h3><p>Application and correction guidance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">📜</div><h3>Caste / Income / Residence Certificate</h3><p>Certificate application help</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">📃</div><h3>EWS Certificate</h3><p>Application assistance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">👷</div><h3>Labour Card</h3><p>Labour registration guidance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🧑‍🔧</div><h3>e-Shram Registration</h3><p>e-Shram portal assistance</p></article>
+<article class="service-card" data-cat="identity"><div class="ico">🏥</div><h3>Ayushman Card</h3><p>Eligibility and authorised service help</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">🆔</div><h3>New Aadhaar Registration</h3><p>Only at authorised enrolment centres</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">🔄</div><h3>Aadhaar Update</h3><p>Guidance / authorised update service</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">✍️</div><h3>Name, DOB, Address & Mobile Update</h3><p>Update process guidance</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">👆</div><h3>Biometric Update</h3><p>At authorised Aadhaar centres only</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">💳</div><h3>PVC Aadhaar Card</h3><p>Official order process assistance</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">⬇️</div><h3>Aadhaar Download</h3><p>Download guidance</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">🖨️</div><h3>Aadhaar Print</h3><p>Document print service</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">🏠</div><h3>Aadhaar Address Change</h3><p>Official update process guidance</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">📝</div><h3>Aadhaar Correction</h3><p>Correction process assistance</p></article>
+<article class="service-card" data-cat="aadhaar"><div class="ico">👶</div><h3>Child Aadhaar</h3><p>Enrolment guidance at authorised centre</p></article>
+<article class="service-card" data-cat="land"><div class="ico">🏡</div><h3>Dakhil-Kharij</h3><p>Mutation application guidance</p></article>
+<article class="service-card" data-cat="land"><div class="ico">📚</div><h3>Jamabandi / Khatiyan</h3><p>Land record assistance</p></article>
+<article class="service-card" data-cat="land"><div class="ico">📑</div><h3>Mutation Application</h3><p>Online application guidance</p></article>
+<article class="service-card" data-cat="land"><div class="ico">🗺️</div><h3>Land Record Print</h3><p>Record download and print</p></article>
+<article class="service-card" data-cat="land"><div class="ico">📍</div><h3>Bhu Naksha / Plot Map</h3><p>Map lookup and print assistance</p></article>
+<article class="service-card" data-cat="land"><div class="ico">🔎</div><h3>Online Apply & Status Check</h3><p>Application tracking assistance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">💸</div><h3>Money Transfer (DMT / AEPS)</h3><p>Only where authorised and available</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">🏧</div><h3>Cash Deposit / Withdrawal</h3><p>Authorised banking point only</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">💰</div><h3>Balance Enquiry</h3><p>Permitted banking service assistance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">🧾</div><h3>Mini Statement</h3><p>Permitted account service assistance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">🏦</div><h3>Account Opening (CSP)</h3><p>Subject to bank / CSP authorisation</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">📈</div><h3>Loan Apply</h3><p>Application guidance; lender approval applies</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">💳</div><h3>Credit Card Apply</h3><p>Application guidance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">🚗</div><h3>FASTag Recharge</h3><p>Recharge assistance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">🛡️</div><h3>Insurance Services</h3><p>Information and application assistance</p></article>
+<article class="service-card" data-cat="banking"><div class="ico">👴</div><h3>Pension / PM Yojana</h3><p>Scheme information and registration help</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">🌈</div><h3>Colour Print</h3><p>Colour document printing</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">🖨️</div><h3>Black & White Print</h3><p>Economical B/W printing</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">📄</div><h3>Photocopy</h3><p>Document copy service</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">📠</div><h3>Document Scanning</h3><p>Scan documents to digital files</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">📚</div><h3>Spiral Binding</h3><p>Project and document binding</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">🪪</div><h3>Lamination</h3><p>Document protection service</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">📸</div><h3>Passport Size Photo Print</h3><p>Photo sizing and printing</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">📐</div><h3>Document Resize</h3><p>Resize images and files for portals</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">⌨️</div><h3>Resume Typing</h3><p>Resume and CV preparation</p></article>
+<article class="service-card" data-cat="printing"><div class="ico">🪪</div><h3>ID Card Print</h3><p>ID card layout and printing</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">✈️</div><h3>Flight Ticket Booking</h3><p>Travel booking assistance</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">🚆</div><h3>Train Ticket Booking</h3><p>Subject to authorised booking access</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">🚌</div><h3>Bus Ticket Booking</h3><p>Bus booking assistance</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">🏨</div><h3>Hotel Booking</h3><p>Hotel reservation assistance</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">⚡</div><h3>Tatkal Ticket</h3><p>Subject to availability and booking rules</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">🔍</div><h3>PNR Status Check</h3><p>PNR status lookup assistance</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">↩️</div><h3>Ticket Cancellation</h3><p>Applicable operator rules and fees</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">🚉</div><h3>IRCTC Services</h3><p>Only through authorised access</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">💡</div><h3>Online Bill Payment</h3><p>Electricity, water, mobile and DTH</p></article>
+<article class="service-card" data-cat="travel"><div class="ico">📱</div><h3>Recharge (All Operators)</h3><p>Mobile and DTH recharge assistance</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">📝</div><h3>Exam Form Help</h3><p>Exam registration assistance</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">🏛️</div><h3>Government Scheme Registration</h3><p>Scheme information and form assistance</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">🔏</div><h3>Digital Signature</h3><p>Guidance / authorised provider assistance</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">📧</div><h3>Email ID Creation</h3><p>Email setup and basic guidance</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">🧰</div><h3>Project Work & Typing</h3><p>Typing, formatting and project support</p></article>
+<article class="service-card" data-cat="digital"><div class="ico">🌐</div><h3>Any Other Online Work</h3><p>Ask us about your digital task</p></article>
+</div>
+<div class="no-results" id="noResults">No matching services found. Try another search.</div>
+</div></section>
+<section id="why"><div class="container why-grid">
+<div class="why-copy"><span class="eyebrow">WHY CHOOSE US</span><h2>Friendly support.<br><span style="color:#e98a16">Genuine service.</span></h2><p>At TECHPRINTZONE, we aim to make digital work simple with clear communication, budget-friendly pricing and helpful customer support. Contact us to confirm service availability, documents and charges before visiting.</p><a class="btn blue" href="https://wa.me/918307154117?text=Hello%20TECHPRINTZONE%2C%20please%20guide%20me.">Talk to our team ↗</a></div>
+<div class="why-panel"><h3>Digital help you can approach with confidence.</h3><p>We explain the process and applicable charges before you proceed. Government approvals, bank services and third-party portal decisions remain with the relevant authority or provider.</p><div class="why-points"><div>🤝 Friendly Customer Support</div><div>🏷️ Budget-Friendly Pricing</div><div>✅ Genuine Assistance</div><div>📱 Easy WhatsApp Enquiry</div></div></div>
+</div></section>
+<section class="request" id="request"><div class="container"><div class="section-head"><span class="eyebrow">QUICK ENQUIRY</span><h2>Request a <span>Service</span></h2><p>Tell us what you need. Your enquiry will open in WhatsApp for confirmation.</p></div>
+<div class="requestbox"><form id="enquiryForm"><div class="formgrid">
+<div class="field"><label for="name">Your Name *</label><input id="name" required placeholder="Enter your name"></div>
+<div class="field"><label for="mobile">Mobile Number *</label><input id="mobile" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></div>
+<div class="field wide"><label for="wanted">Service Required *</label><select id="wanted" required><option value="">Choose a service</option><option>Online Form / Registration</option><option>Government ID / Certificate</option><option>Aadhaar-related assistance</option><option>Land Record</option><option>Banking / Finance</option><option>Print / Photocopy / Scan</option><option>Travel / Ticket Booking</option><option>Bill Payment / Recharge</option><option>Other Online Work</option></select></div>
+<div class="field wide"><label for="details">Details (optional)</label><textarea id="details" rows="3" placeholder="Briefly describe the work you need..."></textarea></div>
+<div class="field wide"><button class="btn blue" type="submit" style="width:100%">Send Enquiry on WhatsApp ↗</button><div class="formhint">This form sends your enquiry text to WhatsApp. It does not collect payment or upload documents.</div></div>
+</div></form>
+<div class="notice"><strong>Important service & privacy notice:</strong> Aadhaar enrolment/biometric updates, AEPS/DMT/CSP banking, IRCTC booking, digital signatures and other regulated services are available only if the shop/provider holds the required authorisation. We are not an official government website. Never share OTP, UPI PIN, ATM PIN, password or banking credentials. Government/portal fees and approvals are determined by the relevant authority.</div>
+</div></div></section>
+<section id="contact"><div class="container"><div class="section-head"><span class="eyebrow">GET IN TOUCH</span><h2>Contact <span>TECHPRINTZONE</span></h2><p>For service availability, price details and shop information, contact us.</p></div>
+<div class="contactgrid"><div class="contactbox"><div class="contactline"><small>Phone / WhatsApp</small><a href="tel:+918307154117">+91 83071 54117</a></div><div class="contactline"><small>Email</small><a href="mailto:thetigerxwd@gmail.com">thetigerxwd@gmail.com</a></div><div class="contactline"><small>Location</small><strong>Motihari, Bihar</strong></div><div class="contactline"><small>Working Hours</small><strong>To be announced</strong></div></div>
+<div class="contactbox"><h3 style="margin-top:0">Need help choosing a service?</h3><p style="color:var(--muted);font-size:13px">Send us a WhatsApp message. We will guide you about availability, required documents and charges.</p><a class="btn" href="https://wa.me/918307154117?text=Hello%20TECHPRINTZONE%2C%20I%20need%20help%20choosing%20a%20service.">Chat with us ↗</a></div></div></div></section>
+<div class="cta"><div class="ctain"><div><h2>TECHPRINTZONE — Your Digital Help Desk</h2><p>Print · Apply · Connect · Get Friendly Support</p></div><a class="btn" href="https://wa.me/918307154117">WhatsApp Us Now ↗</a></div></div>
 </main>
-<footer>© <span id="year"></span> TECHPRINTZONE · Genuine Service · Friendly Support</footer>
+<footer>© <span id="year"></span> <strong>TECHPRINTZONE</strong> · Motihari, Bihar · All rights reserved.</footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('printForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const name=document.getElementById('customer').value.trim();
-  const phone=document.getElementById('phone').value.trim();
-  const service=document.getElementById('service').value;
-  const paper=document.getElementById('paper').value;
-  const copies=document.getElementById('copies').value;
-  const sides=document.getElementById('sides').value;
-  const file=document.getElementById('file').files[0];
-  const notes=document.getElementById('notes').value.trim();
-  const message=`Hello TECHPRINTZONE! I want to place a print service request.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0APaper: ${encodeURIComponent(paper)}%0ACopies/Sets: ${encodeURIComponent(copies)}%0APrint: ${encodeURIComponent(sides)}%0AFile selected: ${encodeURIComponent(file ? file.name : 'No file selected')}%0AInstructions: ${encodeURIComponent(notes || 'None')}%0A%0APlease confirm charges and how to send my file.`;
-  window.open('https://wa.me/918307154117?text='+message,'_blank','noopener');
-});
+const tabs=[...document.querySelectorAll('.tab')],cards=[...document.querySelectorAll('.service-card')],search=document.getElementById('serviceSearch');let active='all';
+function filterServices(){const q=search.value.trim().toLowerCase();let visible=0;cards.forEach(card=>{const matchCat=active==='all'||card.dataset.cat===active;const matchText=card.innerText.toLowerCase().includes(q);const show=matchCat&&matchText;card.style.display=show?'':'none';if(show)visible++;});document.getElementById('noResults').style.display=visible?'none':'block';}
+tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');active=tab.dataset.filter;filterServices();}));
+search.addEventListener('input',filterServices);
+document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),mobile=document.getElementById('mobile').value.trim(),wanted=document.getElementById('wanted').value,details=document.getElementById('details').value.trim();const msg=`Hello TECHPRINTZONE! I want to enquire about a service.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0AService: ${encodeURIComponent(wanted)}%0ADetails: ${encodeURIComponent(details||'Not provided')}%0A%0APlease confirm availability, required documents and charges.`;window.open('https://wa.me/918307154117?text='+msg,'_blank','noopener');});
 </script>
 </body>
 </html>
