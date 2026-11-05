@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TECHPRINTZONE Print Portal - Printout, photocopy, scanning and document services in Motihari.">
+<title>TECHPRINTZONE | Print Portal</title>
+<style>
+:root{--navy:#071a36;--blue:#1264d8;--cyan:#20c9e8;--orange:#ff9d22;--bg:#f3f7ff;--ink:#12213b;--muted:#62718a}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:linear-gradient(110deg,#06152e,#103c78);color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:900;letter-spacing:.5px}.logo span{color:var(--orange)}
+header small{color:#d5e7ff}
+main{max-width:1000px;margin:34px auto;padding:0 16px}
+.hero{background:linear-gradient(125deg,#08214a,#1264d8);color:white;border-radius:20px;padding:32px;margin-bottom:22px;box-shadow:0 12px 30px #0b347222}
+.hero h1{font-size:clamp(28px,5vw,42px);margin:0 0 9px}.hero p{color:#e2efff;margin:0;line-height:1.6}
+.panel{background:white;border:1px solid #e0e8f4;border-radius:18px;padding:25px;box-shadow:0 8px 25px #102c5010}
+h2{margin:0 0 18px;font-size:23px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd7e8;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #9bc8ff;border-color:var(--blue)}
+.field{margin-bottom:16px}.full{grid-column:1/-1}
+.upload{border:2px dashed #9bb7df;background:#f6faff;padding:18px;border-radius:12px}
+.hint{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+button,.btn{border:0;border-radius:10px;padding:14px 20px;font-weight:800;font-size:15px;cursor:pointer;display:inline-block;text-decoration:none}
+button{background:linear-gradient(100deg,var(--orange),#ffc14e);color:#1c2b40;width:100%}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.service{background:white;border:1px solid #e1eaf6;padding:15px;border-radius:12px;text-align:center;font-weight:700;font-size:14px}
+.service span{display:block;font-size:25px;margin-bottom:5px}
+.notice{background:#fff7e8;border-left:4px solid var(--orange);padding:13px;border-radius:8px;color:#60491f;font-size:13px;line-height:1.5;margin-top:18px}
+.contact{text-align:center;margin:22px 0;color:var(--muted);font-size:14px}
+footer{text-align:center;padding:22px;background:#06152e;color:#c8d7eb;font-size:13px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.hero{padding:25px}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">TECH<span>PRINT</span>ZONE</div>
+  <small>YOUR DIGITAL HELP DESK · MOTIHARI, BIHAR</small>
+</header>
+<main>
+  <section class="hero">
+    <h1>Online Print Order Portal</h1>
+    <p>Printout, photocopy aur document services ke liye apni request bhejein. Budget-friendly service, friendly support aur genuine assistance.</p>
+  </section>
+
+  <section class="panel">
+    <h2>🖨️ Print Order Request</h2>
+    <form id="printForm">
+      <div class="grid">
+        <div class="field">
+          <label for="customer">Aapka naam *</label>
+          <input id="customer" required placeholder="Apna naam likhein">
+        </div>
+        <div class="field">
+          <label for="phone">Mobile number *</label>
+          <input id="phone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 digit mobile number">
+        </div>
+        <div class="field">
+          <label for="service">Service *</label>
+          <select id="service" required>
+            <option value="">Service select karein</option>
+            <option>Black & White Printout</option>
+            <option>Colour Printout</option>
+            <option>Photocopy</option>
+            <option>Document Scanning</option>
+            <option>PDF / Document Work</option>
+            <option>Photo Print</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="paper">Paper size</label>
+          <select id="paper"><option>A4</option><option>A3</option><option>Legal</option><option>Photo Paper</option><option>Other / Confirm on WhatsApp</option></select>
+        </div>
+        <div class="field">
+          <label for="copies">Copies / Sets *</label>
+          <input id="copies" type="number" min="1" max="500" value="1" required>
+        </div>
+        <div class="field">
+          <label for="sides">Print type</label>
+          <select id="sides"><option>Single side</option><option>Both sides</option><option>Not applicable</option></select>
+        </div>
+        <div class="field full">
+          <label for="file">Document select karein (optional)</label>
+          <div class="upload"><input id="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><div class="hint">PDF, JPG, PNG ya Word file select kar sakte hain. File is demo page par sirf aapke browser mein select hoti hai; WhatsApp par automatically upload nahi hoti.</div></div>
+        </div>
+        <div class="field full">
+          <label for="notes">Extra instructions</label>
+          <textarea id="notes" rows="3" placeholder="Jaise: page number, colour pages, urgent order..."></textarea>
+        </div>
+        <div class="field full"><button type="submit">WhatsApp par Order Request Bhejein ↗</button></div>
+      </div>
+    </form>
+    <div class="notice"><b>Note:</b> Ye request portal hai, online payment ya automatic file upload abhi enabled nahi hai. Order confirm karne se pehle WhatsApp par file bhejein aur final price / availability confirm karein. OTP, password ya banking PIN kabhi share na karein.</div>
+  </section>
+
+  <div class="services">
+    <div class="service"><span>📄</span>Printout</div>
+    <div class="service"><span>📚</span>Photocopy</div>
+    <div class="service"><span>📠</span>Scanning</div>
+    <div class="service"><span>🎨</span>Colour Print</div>
+    <div class="service"><span>📑</span>PDF Work</div>
+    <div class="service"><span>🪪</span>Photo Print</div>
+  </div>
+  <div class="contact">📞 <a href="tel:+918307154117">+91 83071 54117</a> &nbsp; | &nbsp; ✉ <a href="mailto:thetigerxwd@gmail.com">thetigerxwd@gmail.com</a><br>Motihari, Bihar</div>
+</main>
+<footer>© <span id="year"></span> TECHPRINTZONE · Genuine Service · Friendly Support</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('printForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('customer').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const service=document.getElementById('service').value;
+  const paper=document.getElementById('paper').value;
+  const copies=document.getElementById('copies').value;
+  const sides=document.getElementById('sides').value;
+  const file=document.getElementById('file').files[0];
+  const notes=document.getElementById('notes').value.trim();
+  const message=`Hello TECHPRINTZONE! I want to place a print service request.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0APaper: ${encodeURIComponent(paper)}%0ACopies/Sets: ${encodeURIComponent(copies)}%0APrint: ${encodeURIComponent(sides)}%0AFile selected: ${encodeURIComponent(file ? file.name : 'No file selected')}%0AInstructions: ${encodeURIComponent(notes || 'None')}%0A%0APlease confirm charges and how to send my file.`;
+  window.open('https://wa.me/918307154117?text='+message,'_blank','noopener');
+});
+</script>
+</body>
+</html>
